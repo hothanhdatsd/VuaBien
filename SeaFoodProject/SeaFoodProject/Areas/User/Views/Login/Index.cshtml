@@ -1,0 +1,90 @@
+﻿@model SeaFoodProject.KHACHHANG
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<!--  Begin : Login -->
+<div class="login ">
+    <div class="login-main">
+        <p class="login-heading">Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích, nhận nhiều ưu đãi hấp dẫn</p>
+        <p id="suma-error" class="text-danger"></p>
+        @Html.ValidationSummary()
+        <form action="/User/Login/login" method="post" class="login-form" onsubmit="validLogin()">
+            @Html.AntiForgeryToken()
+            <div class="login-top">
+                <label for="" class="login-title active">Đăng nhập</label>
+                <label for="" class="login-title">Taọ tài khoản </label>
+            </div>
+            @Html.EditorFor(model => model.USERNAME, new { htmlAttributes = new { @class = "login-email", placeholder = "Tên đăng nhập" } })
+            @*<input class="login-email" placeholder="Username" name="username" type="text">*@
+            @Html.ValidationMessageFor(model => model.USERNAME, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.PASS_WORD, new { htmlAttributes = new { @class = "login-password", type = "password", placeholder = "Mật khẩu" } })
+
+            @*<input class="login-password" placeholder="Mật khẩu" name="password" type="password">*@
+            @Html.ValidationMessageFor(model => model.PASS_WORD, "", new { @class = "text-danger" })
+
+            <div class="remem">
+                <input type="checkbox" class="login-remember" value="true" name="login_remember">
+                <span>Nhớ mật khẩu</span>
+            </div>
+            <p class="login-desc">Quên mật khẩu? Nhấn vào đây</p>
+
+            <input type="hidden" value="false" name="login_remember" />
+            <div class="g-recaptcha gg-captcha" style="margin: 0 auto;" data-sitekey="6Lcx_AMdAAAAAH1jtcsBvbjFx2ya5IX0FaEejJeb"></div>
+            <button class="login-submit">Đăng nhập</button>
+        </form>
+        <div class="login-contact">
+            <p class="login-contact-name">Hoặc tiếp tục bằng </p>
+            <a class="nav__link" href=""><i class=" login-icon fab fa-facebook"></i></a>
+            <a class="nav__link" href=""><i class=" login-icon1 fab fa-google"></i></a>
+            <p class="login-contact-name">Bằng việc tiếp tục,bạn đã chấp nhận <br> điều khoản sử dụng</p>
+        </div>
+    </div>
+</div>
+<script>
+    var errorSum = document.getElementById("suma-error");
+    function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+    function validLogin() {
+        var response = grecaptcha.getResponse();
+        if (response.length == 0) {
+            errorSum.innerHTML = "Vui lòng xác nhận bạn không phải là robot!";
+            event.preventDefault();
+        } else {
+            errorSum.innerHTML = "";
+        }
+    }
+</script>
+<!-- End : Login  -->
+
+<script>
+    function AddToCart(ProductId) {
+        $.ajax({
+            type: 'POST', url: '/User/Product/AddToCart', data: { id: BookId }, success: function (data) {
+                $("#Cart_Amount").html(data.ItemAmount);
+            }
+        });
+    }
+</script>
+<style>
+    .login {
+        height: auto;
+    }
+
+    .remem {
+        margin-bottom: 8px;
+    }
+
+    .text-danger {
+        color: red;
+    }
+</style>
+
+
+
+
+

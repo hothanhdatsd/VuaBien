@@ -1,0 +1,79 @@
+﻿@model SeaFoodProject.HAISAN
+
+@{
+    ViewBag.Title = "detail_HAISAN";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content alert-danger">
+    <h2>Chi tiết Hải sản</h2>
+</div>
+
+
+<div>
+    <br />
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã số hải sản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MSHAISAN)
+        </dd>
+
+        <dt>
+            Tên đơn vị tính
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MADVT)
+        </dd>
+
+        <dt>
+            Mã loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MALOAI)
+        </dd>
+
+        <dt>
+            Tên hải sản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENHAISAN)
+        </dd>
+
+        <dt>
+            Chi tiết loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHITIETLOAI)
+        </dd>
+
+        <dt>
+            Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SOLUONG)
+        </dd>
+
+        <dt>
+            Giá tiền
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIATIEN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Sửa", "edit_HAISAN", new { id = Model.MSHAISAN }, new { @class = "btn btn-danger" }) |
+    @Html.ActionLink("Danh sách HS", "list_HAISAN")
+</p>
+

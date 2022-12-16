@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d24a796f7dc041758172c55359409afb" Name="Diagram1">
+        <EntityTypeShape EntityType="KingOceanModel.CHITIETDONDAT" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.CHITIETHOADON" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.CHUCVU" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.DONDAT" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.DONVITINH" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.HAISAN" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.HOADON" Width="1.5" PointX="2.125" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.KHACHHANG" Width="1.5" PointX="6.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.LOAIHAISAN" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.NHANVIEN" Width="1.5" PointX="3.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingOceanModel.TRANGTHAI" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <AssociationConnector Association="KingOceanModel.FK_CHITIETDONDAT_DONDAT" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_CHITIETDONDAT_HAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_CHITIETHOADON_HAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_CHITIETHOADON_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_NHANVIEN_CHUCVU" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_DONDAT_TRANGTHAI" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_HAISAN_DONVITINH" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_HAISAN_LOAIHAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_HOADON_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_KHACHHANG_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="KingOceanModel.FK_KHACHHANG_DONDAT" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

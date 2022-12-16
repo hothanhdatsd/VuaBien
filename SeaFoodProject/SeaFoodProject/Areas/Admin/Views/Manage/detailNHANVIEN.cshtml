@@ -1,0 +1,84 @@
+﻿@model SeaFoodProject.NHANVIEN
+
+@{
+    ViewBag.Title = "detailNHANVIEN";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Chi tiết nhân viên</h2>
+
+<div>
+    <h4>Nhân Viên</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Nhân Viên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MANV)
+        </dd>
+
+        <dt>
+            Họ Tên Nhân Viên
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEN)
+        </dd>
+
+        <dt>
+            Đia Chỉ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+            Số Điện Thoại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            Mã Chức Vụ
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MACV)
+        </dd>
+
+        <dt>
+            Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL)
+        </dd>
+
+        <dt>
+            Mật Khẩu
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PASS_WORD)
+        </dd>
+
+        <dt>
+            Tài Khoản
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USERNAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "editNHANVIEN", new { id = Model.MANV }, new { @class = "btn btn-outline-danger" }) |
+    @Html.ActionLink("Danh Sách NV", "getListNHANVIEN")
+</p>

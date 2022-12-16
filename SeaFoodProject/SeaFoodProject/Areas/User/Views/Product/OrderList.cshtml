@@ -1,0 +1,298 @@
+﻿@model IEnumerable<SeaFoodProject.DONDAT>
+
+@{
+    ViewBag.Title = "OrderList";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+
+}
+<div class="card-wrap">
+    <div class="cart-tittle">
+        <div>
+            <span class="cart-heading">DANH SÁCH ĐƠN HÀNG</span>
+
+        </div>
+    </div>
+    <div class="cart-list">
+        @*<div class="cart-item">
+                <div class="cart-item__tittle">
+                    <img src="https://vuacua.vn/storage/media/wqXNGdu2mEueywGLy0OOoIy9wCki09UAa1bAHTXg.png" />
+                    <div class="cart-item__info">
+                        <span>Cafe Đen (330 ml)</span>
+                        <div class="cart-item__update">
+                            <input class="cart-item__qty" />
+                            <a>Xoá</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item__price">
+                    <span>69000đ</span>
+                </div>
+            </div>*@
+        <div class="cart-item">
+            <table class="table table-order">
+                <tr>
+                    <th>
+                        STT
+                    </th>
+                    <th>
+                        Khách hàng
+                    </th>
+                    <th>
+                        Trạng thái đơn hàng
+                    </th>
+                    <th>
+                        Thời gian
+                    </th>
+                    <th>
+                        Tổng tiền
+                    </th>
+                    <th></th>
+                </tr>
+                @{int stt = 0; }
+                @foreach (var item in Model)
+                {
+                    stt++;
+                    <tr>
+                        <td>
+                            @stt
+                        </td>
+                        <td>
+                            @item.KHACHHANG.HOTEN
+                        </td>
+                        <td>
+                            @if (item.MATT == "MTT001")
+                            {
+                                <span class="tt-success">Giao thành công</span>
+                            }
+                            else
+                            {
+                                if (item.MATT == "MTT002")
+                                {
+                                    <span class="tt-process">Chờ xác nhận</span>
+
+                                }
+                                else
+                                {
+                                    if (item.MATT == "MTT003")
+                                    {
+                                        <span class="tt-shipping">Đang vận chuyển</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="tt-cancel">Đã huỷ</span>
+                                    }
+                                }
+                            }
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.THOIGIAN)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TONGTIEN) đ
+                        </td>
+                        <td>
+                            <a class="orderdetails" href="/User/Product/OrderDetail/@item.MADON">Chi tiết</a>
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+        </div>
+            
+
+
+        
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<style>
+    .pay-button {
+        width: 247px;
+        height: 53px;
+        background-color: #b31e2d;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .pay-button a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 80px;
+        }
+
+        .pay-button:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+    .payment {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        margin: 12px 0;
+    }
+
+    .payment-tittle span {
+        display: block;
+        font-size: 20px;
+        color: #ccc;
+    }
+
+    .payment-value span {
+        text-align: right;
+        display: block;
+        font-size: 20px;
+        color: #b31e2d;
+    }
+
+    .card-wrap {
+        margin: 127px 92px 0 92px;
+        position: relative;
+    }
+
+    .cart-list {
+        overflow-y: scroll;
+        height: 500px;
+        padding: 0 32px;
+    }
+
+    .cart-tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px #b31e2d;
+        height: 78px;
+    }
+
+    .cart-heading {
+        color: #b31e2d;
+        margin-top: 8px;
+        font-weight: 600;
+        display: block;
+        font-size: 24px;
+    }
+
+    .cart-item__tittle img {
+        width: 150px;
+        height: 150px;
+        padding: 12px;
+        border: solid 2px #b31e2d;
+        margin: 12px;
+    }
+
+    .cart-item {
+        justify-content: space-between;
+        display: flex;
+        margin-top: 12px;
+        border-bottom: solid 1px #ccc;
+    }
+
+    .cart-item__tittle {
+        display: flex;
+    }
+
+    .cart-item__qty {
+        width: 40px;
+        height: 25px;
+        padding: 4px;
+    }
+
+    .cart-item__info span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .cart-item__update {
+        margin-top: 12px;
+        width: 130px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .cart-item__update a {
+            border: solid 2px #b31e2d;
+            color: white;
+            padding: 3px;
+            background-color: #b31e2d;
+            cursor: pointer;
+        }
+
+            .cart-item__update a:hover {
+                opacity: 0.8;
+            }
+
+
+    .cart-item__price {
+        color: #b31e2d;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .pay-button.btn-disabled {
+        background-color: #ccc;
+        cursor: default;
+        opacity: 0.8;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .table-order {
+        border: solid 2px #b31e2d;
+        width: 100%;
+        text-align: center;
+    }
+
+    .table-order th {
+        color: #b31e2d;
+        font-size: 20px;
+    }
+
+    .orderdetails {
+        text-decoration: none;
+        font-size: 16px;
+        color: #b31e2d;
+        font-weight: 500;
+    }
+
+    .orderdetails:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    /*trang thai*/
+    .tt-success {
+        color: green;
+    }
+
+    .tt-process {
+        color: blue;
+    }
+
+    .tt-shipping {
+        color: navy;
+    }
+
+    .tt-cancel {
+        color: red;
+    }
+
+</style>
+

@@ -1,0 +1,89 @@
+﻿@model PagedList.IPagedList<SeaFoodProject.HAISAN>
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "list_HAISAN";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+<div class="content alert-danger">
+    <h2>Danh sách Hải sản</h2>
+
+    <p>
+        @Html.ActionLink("Thêm Hải sản", "add_HAISAN", new { }, new { @class = "btn btn-danger" })
+    </p>
+
+</div>
+
+<section class="panel">
+    <div class="panel-body">
+        <div class="pull-right">
+            <!-- Thêm mã phân trang -->
+            <br />
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("list_HAISAN", new { page }))
+            <!-- Kết thúc -->
+        </div>
+    </div>
+</section>
+
+<table class="table">
+    <tr>
+        <th>
+            Mã Hải Sản
+        </th>
+        <th>
+            Mã đơn vị tính
+        </th>
+
+        <th>
+            Tên Hải sản
+        </th>
+        <th>
+            Chi tiết loại
+        </th>
+        <th>
+            Số lượng tồn
+        </th>
+        <th>
+            Giá
+        </th>
+        <th>Thao tác</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSHAISAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MADVT)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TENHAISAN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHITIETLOAI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SOLUONG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GIATIEN)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "edit_HAISAN", new { id = item.MSHAISAN }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Chi Tiết", "detail_HAISAN", new { id = item.MSHAISAN }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Xóa", "delete_HAISAN", new { id = item.MSHAISAN }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

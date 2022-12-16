@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="377bb603cf0d4358a8626c42db2b6f02" Name="Diagram1">
+        <EntityTypeShape EntityType="seafoodModel.CHITIETDONDAT" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.CHITIETHOADON" Width="1.5" PointX="8.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.CHUCVU" Width="1.5" PointX="1.5" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.DONDAT" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.DONVITINH" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.HAISAN" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.HOADON" Width="1.5" PointX="6" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.LOAIHAISAN" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.NHANVIEN" Width="1.5" PointX="3.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.sysdiagram" Width="1.5" PointX="5.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="seafoodModel.TRANGTHAI" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="seafoodModel.FK_CHITIETDONDAT_DONDAT" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_CHITIETDONDAT_HAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_CHITIETHOADON_HAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_CHITIETHOADON_HOADON" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_NHANVIEN_CHUCVU" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_DONDAT_KHACHHANG" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_DONDAT_TRANGTHAI" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_HAISAN_DONVITINH" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_HAISAN_LOAIHAISAN" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_HOADON_NHANVIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="seafoodModel.FK_KHACHHANG_HOADON" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

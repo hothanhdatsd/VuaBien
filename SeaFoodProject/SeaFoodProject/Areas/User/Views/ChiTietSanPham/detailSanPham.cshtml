@@ -1,0 +1,1118 @@
+﻿@model  SeaFoodProject.HAISAN
+
+@{
+    ViewBag.Title = "detailSanPham";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        background-color: white !important;
+        background-image: none !important;
+    }
+</style>
+
+<div>
+    <h4>HAISAN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MSHAISAN)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.MSHAISAN)
+        </dt>
+        <dt style="color:white">
+            @Html.DisplayNameFor(model => model.MSHAISAN)
+        </dt>
+    </dl>
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Cafe sữa (330ml) - Vua Cua Restaurance
+    </title>
+    <meta name="csrf-token" content="XkDKEeSFpHhImowu8ITHcRDgRIJwzcaoysCjfMqD">
+    <meta name="keywords" content="">
+    <meta property="og:image" content="https://vuacua.vn/storage/media/3jjdz0D7Vw7fmhQcd75TanGAFf9YO8Sgz5QKYk6m.png">
+    <meta content="INDEX,FOLLOW" name="robots" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="copyright" content="Copyright © &lt;a href=&quot;{{ store_url }}&quot;&gt;{{ store_name }}&lt;/a&gt; {{ year }}. All rights reserved." />
+    <meta name="author" content="Copyright © &lt;a href=&quot;{{ store_url }}&quot;&gt;{{ store_name }}&lt;/a&gt; {{ year }}. All rights reserved." />
+    <meta http-equiv="audience" content="General" />
+    <meta name="resource-type" content="Document" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="GENERATOR" content="Copyright © &lt;a href=&quot;{{ store_url }}&quot;&gt;{{ store_name }}&lt;/a&gt; {{ year }}. All rights reserved." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="https://vuacua.vn/storage/media/HFjY5yfF6XTgh5Dbs92URqCe1jESxqFtWTnhesql.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="https://vuacua.vn/storage/media/HFjY5yfF6XTgh5Dbs92URqCe1jESxqFtWTnhesql.png" rel="apple-touch-icon" />
+    <link href="https://vuacua.vn/storage/media/HFjY5yfF6XTgh5Dbs92URqCe1jESxqFtWTnhesql.png" rel="apple-touch-icon-precomposed" />
+    <meta property="og:site_name" content="https://vuacua.vn" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="fb:pages" content="" />
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="stylesheet"
+          href="https://vuacua.vn/themes/storefront/public/css/fonts/fontawesome-free-5.15.3-web/font-awesome-css/all.css?v=1.2.05" />
+    <link rel="stylesheet"
+          href="https://vuacua.vn/themes/storefront/public/css/fonts/fontawesome-free-5.15.3-web/font-awesome-css/all.min.css?v=1.2.05" />
+    <link rel="stylesheet"
+          href="https://vuacua.vn/themes/storefront/public/css/bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css?v=1.2.05" />
+    <link media="all" type="text/css" rel="stylesheet" href="https://vuacua.vn/plugin/slick/slick.css">
+    <link media="all" type="text/css" rel="stylesheet" href="https://vuacua.vn/plugin/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://vuacua.vn/themes/storefront/public/css/index.css?v=1.2.05" />
+    <link rel="stylesheet" href="https://vuacua.vn/themes/storefront/public/css/custom.css?v=1.2.05">
+    <link rel="shortcut icon" href="https://vuacua.vn/storage/media/HFjY5yfF6XTgh5Dbs92URqCe1jESxqFtWTnhesql.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://vuacua.vn/themes/storefront/public/css/products.css?v=1.2.05">
+    <link rel="stylesheet" href="https://vuacua.vn/themes/storefront/public/css/product-detail.css?v=1.2.05">
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5R8SR85');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125225603-1"></script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1322729891489378');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=1322729891489378&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script type="application/javascript" async src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=RngnbT">
+    </script>
+    <script>
+        window.YlandCart = {
+            csrfToken: 'XkDKEeSFpHhImowu8ITHcRDgRIJwzcaoysCjfMqD',
+            stripePublishableKey: '',
+            isHome: 0,
+            langs: {
+                'storefront::products.loading': 'Đang tải',
+            },
+        };
+    </script>
+    <script type="text/javascript">
+        var Ziggy = {
+            namedRoutes: { "debugbar.openhandler": { "uri": "_debugbar\/open", "methods": ["GET", "HEAD"], "domain": null }, "debugbar.clockwork": { "uri": "_debugbar\/clockwork\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "debugbar.telescope": { "uri": "_debugbar\/telescope\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "debugbar.assets.css": { "uri": "_debugbar\/assets\/stylesheets", "methods": ["GET", "HEAD"], "domain": null }, "debugbar.assets.js": { "uri": "_debugbar\/assets\/javascript", "methods": ["GET", "HEAD"], "domain": null }, "debugbar.cache.delete": { "uri": "_debugbar\/cache\/{key}\/{tags?}", "methods": ["DELETE"], "domain": null }, "bone.captcha.image": { "uri": "captcha\/image", "methods": ["GET", "HEAD"], "domain": null }, "bone.captcha.image.tag": { "uri": "captcha\/image_tag", "methods": ["GET", "HEAD"], "domain": null }, "admin.translations.index": { "uri": "admin\/translations", "methods": ["GET", "HEAD"], "domain": null }, "admin.translations.update": { "uri": "admin\/translations\/{key}", "methods": ["PUT"], "domain": null }, "admin.dashboard.index": { "uri": "admin", "methods": ["GET", "HEAD"], "domain": null }, "admin.sales_analytics.index": { "uri": "admin\/sales-analytics", "methods": ["GET", "HEAD"], "domain": null }, "admin.settings.edit": { "uri": "admin\/settings", "methods": ["GET", "HEAD"], "domain": null }, "admin.settings.update": { "uri": "admin\/settings", "methods": ["PUT"], "domain": null }, "admin.sitemap.edit": { "uri": "admin\/sitemap", "methods": ["GET", "HEAD"], "domain": null }, "admin.sitemap.update": { "uri": "admin\/sitemap", "methods": ["PUT"], "domain": null }, "admin.utility.show": { "uri": "admin\/utility", "methods": ["GET", "HEAD"], "domain": null }, "admin.utility.import": { "uri": "admin\/utility\/import", "methods": ["GET", "HEAD"], "domain": null }, "admin.utility.regencode": { "uri": "admin\/utility\/regencode", "methods": ["GET", "HEAD"], "domain": null }, "admin.utility.createvc": { "uri": "admin\/utility\/createvc", "methods": ["GET", "HEAD"], "domain": null }, "admin.utility.calcOCT": { "uri": "admin\/utility\/calcOCT", "methods": ["GET", "HEAD"], "domain": null }, "admin.utility.orderStatusLogs": { "uri": "admin\/utility\/orderStatusLogs", "methods": ["GET", "HEAD"], "domain": null }, "admin.categories.tree": { "uri": "admin\/categories\/tree", "methods": ["GET", "HEAD"], "domain": null }, "admin.categories.tree.update": { "uri": "admin\/categories\/tree", "methods": ["PUT"], "domain": null }, "admin.categories.index": { "uri": "admin\/categories", "methods": ["GET", "HEAD"], "domain": null }, "admin.categories.store": { "uri": "admin\/categories", "methods": ["POST"], "domain": null }, "admin.categories.show": { "uri": "admin\/categories\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.categories.update": { "uri": "admin\/categories\/{id}", "methods": ["PUT"], "domain": null }, "admin.categories.destroy": { "uri": "admin\/categories\/{id}", "methods": ["DELETE"], "domain": null }, "admin.articlescategories.tree": { "uri": "admin\/articles-categories\/tree", "methods": ["GET", "HEAD"], "domain": null }, "admin.articlescategories.tree.update": { "uri": "admin\/articles-categories\/tree", "methods": ["PUT"], "domain": null }, "admin.articlescategories.index": { "uri": "admin\/articles-categories", "methods": ["GET", "HEAD"], "domain": null }, "admin.articlescategories.store": { "uri": "admin\/articles-categories", "methods": ["POST"], "domain": null }, "admin.articlescategories.show": { "uri": "admin\/articles-categories\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.articlescategories.update": { "uri": "admin\/articles-categories\/{id}", "methods": ["PUT"], "domain": null }, "admin.articlescategories.destroy": { "uri": "admin\/articles-categories\/{id}", "methods": ["DELETE"], "domain": null }, "admin.media.index": { "uri": "admin\/media", "methods": ["GET", "HEAD"], "domain": null }, "admin.media.store": { "uri": "admin\/media", "methods": ["POST"], "domain": null }, "admin.media.destroy": { "uri": "admin\/media\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.file_manager.index": { "uri": "admin\/file-manager", "methods": ["GET", "HEAD"], "domain": null }, "media.checkfile": { "uri": "checkfile", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.index": { "uri": "admin\/menus", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.create": { "uri": "admin\/menus\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.store": { "uri": "admin\/menus", "methods": ["POST"], "domain": null }, "admin.menus.edit": { "uri": "admin\/menus\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.update": { "uri": "admin\/menus\/{id}", "methods": ["PUT"], "domain": null }, "admin.menus.destroy": { "uri": "admin\/menus\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.menus.items.create": { "uri": "admin\/menus\/{menuId}\/items\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.items.store": { "uri": "admin\/menus\/{menuId}\/items", "methods": ["POST"], "domain": null }, "admin.menus.items.edit": { "uri": "admin\/menus\/{menuId}\/items\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.menus.items.update": { "uri": "admin\/menus\/{menuId}\/items\/{id}", "methods": ["PUT"], "domain": null }, "admin.menus.items.destroy": { "uri": "admin\/menus\/items\/{id}", "methods": ["DELETE"], "domain": null }, "admin.menus.items.order.update": { "uri": "admin\/menus\/items\/order", "methods": ["PUT"], "domain": null }, "admin.login": { "uri": "admin\/login", "methods": ["GET", "HEAD"], "domain": null }, "admin.login.post": { "uri": "admin\/login", "methods": ["POST"], "domain": null }, "admin.logout": { "uri": "admin\/logout", "methods": ["GET", "HEAD"], "domain": null }, "admin.reset": { "uri": "admin\/password\/reset", "methods": ["GET", "HEAD"], "domain": null }, "admin.reset.post": { "uri": "admin\/password\/reset", "methods": ["POST"], "domain": null }, "admin.reset.complete": { "uri": "admin\/password\/reset\/{email}\/{code}", "methods": ["GET", "HEAD"], "domain": null }, "admin.reset.complete.post": { "uri": "admin\/password\/reset\/{email}\/{code}", "methods": ["POST"], "domain": null }, "admin.users.index": { "uri": "admin\/users", "methods": ["GET", "HEAD"], "domain": null }, "admin.users.create": { "uri": "admin\/users\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.users.store": { "uri": "admin\/users", "methods": ["POST"], "domain": null }, "admin.users.edit": { "uri": "admin\/users\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.users.update": { "uri": "admin\/users\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.users.destroy": { "uri": "admin\/users\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.users.reset_password": { "uri": "admin\/users\/{id}\/reset-password", "methods": ["GET", "HEAD"], "domain": null }, "admin.roles.index": { "uri": "admin\/roles", "methods": ["GET", "HEAD"], "domain": null }, "admin.roles.create": { "uri": "admin\/roles\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.roles.store": { "uri": "admin\/roles", "methods": ["POST"], "domain": null }, "admin.roles.edit": { "uri": "admin\/roles\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.roles.update": { "uri": "admin\/roles\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.roles.destroy": { "uri": "admin\/roles\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.profile.edit": { "uri": "admin\/profile", "methods": ["GET", "HEAD"], "domain": null }, "admin.profile.update": { "uri": "admin\/profile", "methods": ["PUT"], "domain": null }, "login": { "uri": "login", "methods": ["GET", "HEAD"], "domain": null }, "login.post": { "uri": "login", "methods": ["POST"], "domain": null }, "login.redirect": { "uri": "login\/{provider}", "methods": ["GET", "HEAD"], "domain": null }, "login.callback": { "uri": "login\/{provider}\/callback", "methods": ["GET", "HEAD"], "domain": null }, "logout": { "uri": "logout", "methods": ["GET", "HEAD"], "domain": null }, "register": { "uri": "register", "methods": ["GET", "HEAD"], "domain": null }, "register.post": { "uri": "register", "methods": ["POST"], "domain": null }, "reset": { "uri": "password\/reset", "methods": ["GET", "HEAD"], "domain": null }, "reset.post": { "uri": "password\/reset", "methods": ["POST"], "domain": null }, "reset.complete": { "uri": "password\/reset\/{email}\/{code}", "methods": ["GET", "HEAD"], "domain": null }, "reset.complete.post": { "uri": "password\/reset\/{email}\/{code}", "methods": ["POST"], "domain": null }, "admin.transactions.index": { "uri": "admin\/transactions", "methods": ["GET", "HEAD"], "domain": null }, "admin.taxes.index": { "uri": "admin\/taxes", "methods": ["GET", "HEAD"], "domain": null }, "admin.taxes.create": { "uri": "admin\/taxes\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.taxes.store": { "uri": "admin\/taxes", "methods": ["POST"], "domain": null }, "admin.taxes.edit": { "uri": "admin\/taxes\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.taxes.update": { "uri": "admin\/taxes\/{id}", "methods": ["PUT"], "domain": null }, "admin.taxes.destroy": { "uri": "admin\/taxes\/{ids?}", "methods": ["DELETE"], "domain": null }, "cart.taxes.store": { "uri": "cart\/taxes", "methods": ["POST"], "domain": null }, "admin.sliders.index": { "uri": "admin\/sliders", "methods": ["GET", "HEAD"], "domain": null }, "admin.sliders.create": { "uri": "admin\/sliders\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.sliders.store": { "uri": "admin\/sliders", "methods": ["POST"], "domain": null }, "admin.sliders.edit": { "uri": "admin\/sliders\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.sliders.update": { "uri": "admin\/sliders\/{id}", "methods": ["PUT"], "domain": null }, "admin.sliders.destroy": { "uri": "admin\/sliders\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.slider_options.index": { "uri": "admin\/slider-options", "methods": ["GET", "HEAD"], "domain": null }, "admin.slider_options.create": { "uri": "admin\/slider-options\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.slider_options.store": { "uri": "admin\/slider-options", "methods": ["POST"], "domain": null }, "admin.slider_options.edit": { "uri": "admin\/slider-options\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.slider_options.update": { "uri": "admin\/slider-options\/{id}", "methods": ["PUT"], "domain": null }, "admin.slider_options.destroy": { "uri": "admin\/slider-options\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.reviews.index": { "uri": "admin\/reviews", "methods": ["GET", "HEAD"], "domain": null }, "admin.reviews.edit": { "uri": "admin\/reviews\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.reviews.update": { "uri": "admin\/reviews\/{id}", "methods": ["PUT"], "domain": null }, "admin.reviews.destroy": { "uri": "admin\/reviews\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.products.reviews.index": { "uri": "admin\/products\/{productId}\/reviews", "methods": ["GET", "HEAD"], "domain": null }, "products.reviews.store": { "uri": "products\/{productId}\/reviews", "methods": ["POST"], "domain": null }, "products.reviews.index": { "uri": "products\/{productId}\/userreviews", "methods": ["GET", "HEAD"], "domain": null }, "products.reviews.ratings": { "uri": "products\/{productId}\/ratings", "methods": ["GET", "HEAD"], "domain": null }, "admin.reports.index": { "uri": "admin\/reports", "methods": ["GET", "HEAD"], "domain": null }, "admin.products.index": { "uri": "admin\/products", "methods": ["GET", "HEAD"], "domain": null }, "admin.products.create": { "uri": "admin\/products\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.products.store": { "uri": "admin\/products", "methods": ["POST"], "domain": null }, "admin.products.edit": { "uri": "admin\/products\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.products.update": { "uri": "admin\/products\/{id}", "methods": ["PUT"], "domain": null }, "admin.products.destroy": { "uri": "admin\/products\/{ids}", "methods": ["DELETE"], "domain": null }, "products.search": { "uri": "search", "methods": ["GET", "HEAD"], "domain": null }, "products.index": { "uri": "thuc-don\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "products.menuvce": { "uri": "thuc-don-vce", "methods": ["GET", "HEAD"], "domain": null }, "products.loadhome": { "uri": "san-pham\/loadhome", "methods": ["GET", "HEAD"], "domain": null }, "products.show": { "uri": "san-pham\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "products.options": { "uri": "productoptions\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "products.cat": { "uri": "products\/cat\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "products.landingpage": { "uri": "landingpage\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "products.showMegaMenu": { "uri": "showMegaMenu", "methods": ["GET", "HEAD"], "domain": null }, "account.dashboard.index": { "uri": "account", "methods": ["GET", "HEAD"], "domain": null }, "account.profile.edit": { "uri": "account\/profile", "methods": ["GET", "HEAD"], "domain": null }, "account.profile.update": { "uri": "account\/profile", "methods": ["PUT"], "domain": null }, "account.orders.index": { "uri": "account\/orders", "methods": ["GET", "HEAD"], "domain": null }, "account.orders.check": { "uri": "account\/check", "methods": ["GET", "HEAD"], "domain": null }, "account.orders.show": { "uri": "account\/orders\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "account.wishlist.index": { "uri": "account\/wishlist", "methods": ["GET", "HEAD"], "domain": null }, "account.wishlist.destroy": { "uri": "account\/wishlist\/{productId}", "methods": ["DELETE"], "domain": null }, "account.reviews.index": { "uri": "account\/reviews", "methods": ["GET", "HEAD"], "domain": null }, "account.promotion.index": { "uri": "account\/promotion", "methods": ["GET", "HEAD"], "domain": null }, "account.points.index": { "uri": "account\/points", "methods": ["GET", "HEAD"], "domain": null }, "account.vouchers.index": { "uri": "account\/vouchers", "methods": ["GET", "HEAD"], "domain": null }, "account.menuMobile.index": { "uri": "account\/menuMobile", "methods": ["GET", "HEAD"], "domain": null }, "wishlist.store": { "uri": "wishlist", "methods": ["POST"], "domain": null }, "admin.orders.index": { "uri": "admin\/orders", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.export": { "uri": "admin\/orders\/export", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.create": { "uri": "admin\/orders\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.store": { "uri": "admin\/orders\/create", "methods": ["POST"], "domain": null }, "admin.orders.edit": { "uri": "admin\/orders\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.update": { "uri": "admin\/orders\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.orders.show": { "uri": "admin\/orders\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.status.update": { "uri": "admin\/orders\/{order}\/status", "methods": ["PUT"], "domain": null }, "admin.orders.edit.product": { "uri": "admin\/orders\/{order}\/editProduct", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.edit.addItemToOrder": { "uri": "admin\/orders\/addItemToOrder", "methods": ["POST"], "domain": null }, "admin.orders.edit.options": { "uri": "admin\/orders\/options\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.orders.print.show": { "uri": "admin\/orders\/{order}\/print", "methods": ["GET", "HEAD"], "domain": null }, "compare.index": { "uri": "compare", "methods": ["GET", "HEAD"], "domain": null }, "compare.store": { "uri": "compare", "methods": ["POST"], "domain": null }, "compare.destroy": { "uri": "compare\/{id}", "methods": ["DELETE"], "domain": null }, "admin.articles.index": { "uri": "admin\/articles", "methods": ["GET", "HEAD"], "domain": null }, "admin.articles.create": { "uri": "admin\/articles\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.articles.store": { "uri": "admin\/articles", "methods": ["POST"], "domain": null }, "admin.articles.edit": { "uri": "admin\/articles\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.articles.update": { "uri": "admin\/articles\/{id}", "methods": ["PUT"], "domain": null }, "admin.articles.destroy": { "uri": "admin\/articles\/{ids}", "methods": ["DELETE"], "domain": null }, "articles.index": { "uri": "blogs\/category\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "articles.show": { "uri": "blogs\/{slug}", "methods": ["GET", "HEAD"], "domain": null }, "articles.showproducts": { "uri": "blogs\/showproducts\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.attributes.index": { "uri": "admin\/attributes", "methods": ["GET", "HEAD"], "domain": null }, "admin.attributes.create": { "uri": "admin\/attributes\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.attributes.store": { "uri": "admin\/attributes", "methods": ["POST"], "domain": null }, "admin.attributes.edit": { "uri": "admin\/attributes\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.attributes.update": { "uri": "admin\/attributes\/{id}", "methods": ["PUT"], "domain": null }, "admin.attributes.destroy": { "uri": "admin\/attributes\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.attribute_sets.index": { "uri": "admin\/attributes-sets", "methods": ["GET", "HEAD"], "domain": null }, "admin.attribute_sets.create": { "uri": "admin\/attributes-sets\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.attribute_sets.store": { "uri": "admin\/attributes-sets", "methods": ["POST"], "domain": null }, "admin.attribute_sets.edit": { "uri": "admin\/attributes-sets\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.attribute_sets.update": { "uri": "admin\/attributes-sets\/{id}", "methods": ["PUT"], "domain": null }, "admin.attribute_sets.destroy": { "uri": "admin\/attributes-sets\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.bookings.index": { "uri": "admin\/bookings", "methods": ["GET", "HEAD"], "domain": null }, "admin.bookings.create": { "uri": "admin\/bookings\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.bookings.store": { "uri": "admin\/bookings", "methods": ["POST"], "domain": null }, "admin.bookings.edit": { "uri": "admin\/bookings\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.bookings.update": { "uri": "admin\/bookings\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.bookings.destroy": { "uri": "admin\/bookings\/{ids?}", "methods": ["DELETE"], "domain": null }, "booking.create": { "uri": "dat-ban\/{type}\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "booking.store": { "uri": "dat-ban", "methods": ["POST"], "domain": null }, "booking.storecamp": { "uri": "dat-ban-ctkm", "methods": ["POST"], "domain": null }, "cart.index": { "uri": "cart", "methods": ["GET", "HEAD"], "domain": null }, "cart.items.store": { "uri": "cart\/items", "methods": ["POST"], "domain": null }, "cart.bonus": { "uri": "cart\/bonus", "methods": ["POST"], "domain": null }, "cart.items.update": { "uri": "cart\/items\/{cartItemId}", "methods": ["PUT"], "domain": null }, "cart.items.destroy": { "uri": "cart\/items\/{cartItemId}", "methods": ["DELETE"], "domain": null }, "cart.clear": { "uri": "cart\/clear", "methods": ["GET", "HEAD"], "domain": null }, "cart.shipping_method.store": { "uri": "cart\/shipping-method", "methods": ["POST"], "domain": null }, "cart.shipping_method.check_ahamove_shipping_fee": { "uri": "cart\/estimate-ahamove-shipping-fee", "methods": ["GET", "HEAD"], "domain": null }, "cart.shipping_method.check_internal_shipping_fee": { "uri": "cart\/estimate-internal-shipping-fee", "methods": ["GET", "HEAD"], "domain": null }, "cart.showCartSlider": { "uri": "cart\/show-cart-slider", "methods": ["GET", "HEAD"], "domain": null }, "cart.items.removeCartSlider": { "uri": "cart\/removeCartSlier\/{cartItemId}", "methods": ["DELETE"], "domain": null }, "checkout.create": { "uri": "checkout", "methods": ["GET", "HEAD"], "domain": null }, "checkout.prepare": { "uri": "prepare", "methods": ["POST"], "domain": null }, "checkout.store": { "uri": "checkout", "methods": ["POST"], "domain": null }, "checkout.complete.store": { "uri": "checkout\/complete\/{orderId}\/{paymentGateway}", "methods": ["GET", "HEAD"], "domain": null }, "checkout.complete.show": { "uri": "checkout\/complete", "methods": ["GET", "HEAD"], "domain": null }, "checkout.callback.store": { "uri": "checkout\/callback\/{paymentGateway}", "methods": ["GET", "HEAD"], "domain": null }, "checkout.payment_canceled.store": { "uri": "checkout\/payment-canceled\/{orderId}", "methods": ["GET", "HEAD"], "domain": null }, "admin.contacts.index": { "uri": "admin\/contacts", "methods": ["GET", "HEAD"], "domain": null }, "admin.contacts.create": { "uri": "admin\/contacts\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.contacts.store": { "uri": "admin\/contacts", "methods": ["POST"], "domain": null }, "admin.contacts.edit": { "uri": "admin\/contacts\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.contacts.update": { "uri": "admin\/contacts\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.contacts.destroy": { "uri": "admin\/contacts\/{ids?}", "methods": ["DELETE"], "domain": null }, "contact.create": { "uri": "lien-he\/{type}\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "contact.store": { "uri": "lien-he", "methods": ["POST"], "domain": null }, "admin.coupons.index": { "uri": "admin\/coupons", "methods": ["GET", "HEAD"], "domain": null }, "admin.coupons.create": { "uri": "admin\/coupons\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.coupons.store": { "uri": "admin\/coupons", "methods": ["POST"], "domain": null }, "admin.coupons.edit": { "uri": "admin\/coupons\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.coupons.update": { "uri": "admin\/coupons\/{id}", "methods": ["PUT"], "domain": null }, "admin.coupons.destroy": { "uri": "admin\/coupons\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.coupons.sendsms": { "uri": "admin\/coupons\/sendsms", "methods": ["POST"], "domain": null }, "admin.coupons.checkvc": { "uri": "admin\/coupons\/checkvc", "methods": ["GET", "HEAD"], "domain": null }, "admin.coupons.showvc": { "uri": "admin\/coupons\/showvc\/{code}", "methods": ["GET", "HEAD"], "domain": null }, "admin.coupons.updatevc": { "uri": "admin\/coupons\/updatevc", "methods": ["POST"], "domain": null }, "cart.coupon.store": { "uri": "cart\/coupon", "methods": ["POST"], "domain": null }, "voucher.xmas": { "uri": "voucher\/xmas", "methods": ["GET", "HEAD"], "domain": null }, "voucher.getcode": { "uri": "voucher\/getcode", "methods": ["POST"], "domain": null }, "admin.currency_rates.index": { "uri": "admin\/currency-rates", "methods": ["GET", "HEAD"], "domain": null }, "admin.currency_rates.edit": { "uri": "admin\/currency-rates\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.currency_rates.update": { "uri": "admin\/currency-rates\/{id}", "methods": ["PUT"], "domain": null }, "admin.currency_rates.refresh": { "uri": "admin\/currency-rates\/refresh", "methods": ["GET", "HEAD"], "domain": null }, "current_currency.store": { "uri": "current-currency\/{code}", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.index": { "uri": "admin\/feedbacks", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.product": { "uri": "admin\/feedbacks?type=product", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.complain": { "uri": "admin\/feedbacks?type=complain", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.franchise": { "uri": "admin\/feedbacks?type=franchise", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.create": { "uri": "admin\/feedbacks\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.store": { "uri": "admin\/feedbacks", "methods": ["POST"], "domain": null }, "admin.feedbacks.edit": { "uri": "admin\/feedbacks\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.feedbacks.update": { "uri": "admin\/feedbacks\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.feedbacks.destroy": { "uri": "admin\/feedbacks\/{ids?}", "methods": ["DELETE"], "domain": null }, "feedback.create": { "uri": "phan-hoi-chat-luong", "methods": ["GET", "HEAD"], "domain": null }, "feedback.store": { "uri": "phan-hoi-chat-luong", "methods": ["POST"], "domain": null }, "franchise.create": { "uri": "nhuong-quyen-thuong-mai", "methods": ["GET", "HEAD"], "domain": null }, "franchise.store": { "uri": "nhuong-quyen-thuong-mai", "methods": ["POST"], "domain": null }, "feedback.complain": { "uri": "tiep-nhan-khieu-nai", "methods": ["GET", "HEAD"], "domain": null }, "feedback.storecomplain": { "uri": "tiep-nhan-khieu-nai", "methods": ["POST"], "domain": null }, "admin.options.index": { "uri": "admin\/options", "methods": ["GET", "HEAD"], "domain": null }, "admin.options.create": { "uri": "admin\/options\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.options.store": { "uri": "admin\/options", "methods": ["POST"], "domain": null }, "admin.options.show": { "uri": "admin\/options\/{id}", "methods": ["GET", "HEAD"], "domain": null }, "admin.options.edit": { "uri": "admin\/options\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.options.update": { "uri": "admin\/options\/{id}", "methods": ["PUT"], "domain": null }, "admin.options.destroy": { "uri": "admin\/options\/{ids}", "methods": ["DELETE"], "domain": null }, "countries.states.index": { "uri": "countries\/{code}\/states", "methods": ["GET", "HEAD"], "domain": null }, "countries.states.districts": { "uri": "countries\/{code}\/districts", "methods": ["GET", "HEAD"], "domain": null }, "countries.states.wards": { "uri": "countries\/{code}\/wards", "methods": ["GET", "HEAD"], "domain": null }, "admin.shippingcosts.index": { "uri": "admin\/shippingcosts", "methods": ["GET", "HEAD"], "domain": null }, "admin.shippingcosts.create": { "uri": "admin\/shippingcosts\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.shippingcosts.store": { "uri": "admin\/shippingcosts", "methods": ["POST"], "domain": null }, "admin.shippingcosts.edit": { "uri": "admin\/shippingcosts\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.shippingcosts.update": { "uri": "admin\/shippingcosts\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.shippingcosts.destroy": { "uri": "admin\/shippingcosts\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.pages.index": { "uri": "admin\/pages", "methods": ["GET", "HEAD"], "domain": null }, "admin.pages.create": { "uri": "admin\/pages\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.pages.store": { "uri": "admin\/pages", "methods": ["POST"], "domain": null }, "admin.pages.edit": { "uri": "admin\/pages\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.pages.update": { "uri": "admin\/pages\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.pages.destroy": { "uri": "admin\/pages\/{ids?}", "methods": ["DELETE"], "domain": null }, "home": { "uri": "\/", "methods": ["GET", "HEAD"], "domain": null }, "admin.brands.index": { "uri": "admin\/brands", "methods": ["GET", "HEAD"], "domain": null }, "admin.brands.create": { "uri": "admin\/brands\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.brands.store": { "uri": "admin\/brands", "methods": ["POST"], "domain": null }, "admin.brands.edit": { "uri": "admin\/brands\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.brands.update": { "uri": "admin\/brands\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.brands.destroy": { "uri": "admin\/brands\/{ids?}", "methods": ["DELETE"], "domain": null }, "admin.branches.index": { "uri": "admin\/branches", "methods": ["GET", "HEAD"], "domain": null }, "admin.branches.create": { "uri": "admin\/branches\/create", "methods": ["GET", "HEAD"], "domain": null }, "admin.branches.store": { "uri": "admin\/branches", "methods": ["POST"], "domain": null }, "admin.branches.edit": { "uri": "admin\/branches\/{id}\/edit", "methods": ["GET", "HEAD"], "domain": null }, "admin.branches.update": { "uri": "admin\/branches\/{id}\/edit", "methods": ["PUT"], "domain": null }, "admin.branches.destroy": { "uri": "admin\/branches\/{ids?}", "methods": ["DELETE"], "domain": null }, "branches.index": { "uri": "chi-nhanh", "methods": ["GET", "HEAD"], "domain": null }, "admin.storefront.settings.edit": { "uri": "admin\/storefront", "methods": ["GET", "HEAD"], "domain": null }, "admin.storefront.settings.update": { "uri": "admin\/storefront", "methods": ["PUT"], "domain": null }, "cookie_bar.accepted": { "uri": "cookie-bar", "methods": ["POST"], "domain": null }, "products.quick_view.show": { "uri": "products\/{slug}\/quick-view", "methods": ["GET", "HEAD"], "domain": null }, "sitemap.index": { "uri": "sitemap.xml", "methods": ["GET", "HEAD"], "domain": null }, "sitemap.products": { "uri": "products-feed.xml", "methods": ["GET", "HEAD"], "domain": null } },
+            baseUrl: 'https://vuacua.vn/',
+            baseProtocol: 'https',
+            baseDomain: 'vuacua.vn',
+            basePort: false,
+            defaultParameters: []
+        };
+
+        !function (e, t) { "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define("route", [], t) : "object" == typeof exports ? exports.route = t() : e.route = t() }(this, function () { return function (e) { var t = {}; function r(n) { if (t[n]) return t[n].exports; var o = t[n] = { i: n, l: !1, exports: {} }; return e[n].call(o.exports, o, o.exports, r), o.l = !0, o.exports } return r.m = e, r.c = t, r.d = function (e, t, n) { r.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n }) }, r.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, r.t = function (e, t) { if (1 & t && (e = r(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var n = Object.create(null); if (r.r(n), Object.defineProperty(n, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var o in e) r.d(n, o, function (t) { return e[t] }.bind(null, o)); return n }, r.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return r.d(t, "a", t), t }, r.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, r.p = "", r(r.s = 0) }([function (e, t, r) { "use strict"; r.r(t); var n = function () { function e(e, t) { for (var r = 0; r < t.length; r++) { var n = t[r]; n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n) } } return function (t, r, n) { return r && e(t.prototype, r), n && e(t, n), t } }(), o = function () { function e(t, r, n) { if (function (e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") }(this, e), this.name = t, this.ziggy = n, this.route = this.ziggy.namedRoutes[this.name], void 0 === this.name) throw new Error("Ziggy Error: You must provide a route name"); if (void 0 === this.route) throw new Error("Ziggy Error: route '" + this.name + "' is not found in the route list"); this.absolute = void 0 === r || r, this.domain = this.setDomain(), this.path = this.route.uri.replace(/^\//, "") } return n(e, [{ key: "setDomain", value: function () { if (!this.absolute) return "/"; if (!this.route.domain) return this.ziggy.baseUrl.replace(/\/?$/, "/"); var e = (this.route.domain || this.ziggy.baseDomain).replace(/\/+$/, ""); return this.ziggy.basePort && e.replace(/\/+$/, "") === this.ziggy.baseDomain.replace(/\/+$/, "") && (e = this.ziggy.baseDomain + ":" + this.ziggy.basePort), this.ziggy.baseProtocol + "://" + e + "/" } }, { key: "construct", value: function () { return this.domain + this.path } }]), e }(); r.d(t, "default", function () { return c }); var i = Object.assign || function (e) { for (var t = 1; t < arguments.length; t++) { var r = arguments[t]; for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]) } return e }, u = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (e) { return typeof e } : function (e) { return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e }, a = function () { function e(e, t) { for (var r = 0; r < t.length; r++) { var n = t[r]; n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, n.key, n) } } return function (t, r, n) { return r && e(t.prototype, r), n && e(t, n), t } }(), s = function (e) { function t(e, r, n) { var i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null; !function (e, t) { if (!(e instanceof t)) throw new TypeError("Cannot call a class as a function") }(this, t); var u = function (e, t) { if (!e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return !t || "object" != typeof t && "function" != typeof t ? e : t }(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)); return u.name = e, u.absolute = n, u.ziggy = i || Ziggy, u.template = u.name ? new o(e, n, u.ziggy).construct() : "", u.urlParams = u.normalizeParams(r), u.queryParams = u.normalizeParams(r), u } return function (e, t) { if ("function" != typeof t && null !== t) throw new TypeError("Super expression must either be null or a function, not " + typeof t); e.prototype = Object.create(t && t.prototype, { constructor: { value: e, enumerable: !1, writable: !0, configurable: !0 } }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t) }(t, String), a(t, [{ key: "normalizeParams", value: function (e) { return void 0 === e ? {} : ((e = "object" !== (void 0 === e ? "undefined" : u(e)) ? [e] : e).hasOwnProperty("id") && -1 == this.template.indexOf("{id}") && (e = [e.id]), this.numericParamIndices = Array.isArray(e), i({}, e)) } }, { key: "with", value: function (e) { return this.urlParams = this.normalizeParams(e), this } }, { key: "withQuery", value: function (e) { return i(this.queryParams, e), this } }, { key: "hydrateUrl", value: function () { var e = this, t = this.urlParams, r = 0, n = this.template.match(/{([^}]+)}/gi), o = !1; return n && n.length != Object.keys(t).length && (o = !0), this.template.replace(/{([^}]+)}/gi, function (n, i) { var u = n.replace(/\{|\}/gi, "").replace(/\?$/, ""), a = e.numericParamIndices ? r : u, s = e.ziggy.defaultParameters[u]; if (s && o && (e.numericParamIndices ? (t = Object.values(t)).splice(a, 0, s) : t[a] = s), r++, void 0 !== t[a]) return delete e.queryParams[a], t[a].id || encodeURIComponent(t[a]); if (-1 === n.indexOf("?")) throw new Error("Ziggy Error: '" + u + "' key is required for route '" + e.name + "'"); return "" }) } }, { key: "matchUrl", value: function () { this.urlParams; var e = window.location.hostname + (window.location.port ? ":" + window.location.port : "") + window.location.pathname, t = this.template.replace(/(\{[^\}]*\})/gi, "[^/?]+").split("://")[1], r = e.replace(/\/?$/, "/"); return new RegExp("^" + t + "/$").test(r) } }, { key: "constructQuery", value: function () { if (0 === Object.keys(this.queryParams).length) return ""; var e = "?"; return Object.keys(this.queryParams).forEach(function (t, r) { void 0 !== this.queryParams[t] && null !== this.queryParams[t] && (e = 0 === r ? e : e + "&", e += t + "=" + encodeURIComponent(this.queryParams[t])) }.bind(this)), e } }, { key: "current", value: function () { var e = this, r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null, n = Object.keys(this.ziggy.namedRoutes).filter(function (r) { return -1 !== e.ziggy.namedRoutes[r].methods.indexOf("GET") && new t(r, void 0, void 0, e.ziggy).matchUrl() })[0]; return r ? new RegExp(r.replace("*", ".*").replace(".", "."), "i").test(n) : n } }, { key: "parse", value: function () { this.return = this.hydrateUrl() + this.constructQuery() } }, { key: "url", value: function () { return this.parse(), this.return } }, { key: "toString", value: function () { return this.url() } }, { key: "valueOf", value: function () { return this.url() } }]), t }(); function c(e, t, r, n) { return new s(e, t, r, n) } }]).default });
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R8SR85" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartSlidebar"
+         aria-labelledby="mobileSidebarLabel">
+
+        <div class="content" style="height: 100vh;">
+            <div class="offcanvas-header">
+                <ul class="nav nav-tabs " role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" data-toggle="tab" href="#cart-slidebar" role="tab" aria-controls="cart-slidebar"
+                           aria-selected="true">
+                            Giỏ hàng
+                            <span class="rounded-circle badge quantity">
+                                0
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" data-toggle="tab" href="#customer-buy" role="tab" aria-controls="customer-buy"
+                           aria-selected="false">Khách cũng mua</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-body">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="cart-slidebar">
+                        <h3 class="empty-cart">Giỏ hàng của bạn trống</h3>
+
+                        <div id="overlay" onclick="off()">
+                            <div class="w-100 d-flex justify-content-center align-items-center">
+                                <div class="spinner"></div>
+                            </div>
+                        </div>
+                        <style>
+                            .spinner {
+                                height: 60px;
+                                width: 60px;
+                                margin: auto;
+                                display: flex;
+                                position: absolute;
+                                -webkit-animation: rotation .6s infinite linear;
+                                -moz-animation: rotation .6s infinite linear;
+                                -o-animation: rotation .6s infinite linear;
+                                animation: rotation .6s infinite linear;
+                                border-left: 6px solid rgba(0, 174, 239, .15);
+                                border-right: 6px solid rgba(0, 174, 239, .15);
+                                border-bottom: 6px solid rgba(0, 174, 239, .15);
+                                border-top: 6px solid rgba(0, 174, 239, .8);
+                                border-radius: 100%;
+                            }
+
+
+
+
+
+
+
+                            #overlay {
+                                position: absolute;
+                                display: none;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                background-color: rgba(0, 0, 0, 0.5);
+                                z-index: 2;
+                                cursor: pointer;
+                            }
+                        </style>
+                    </div>
+                    <div class="tab-pane fade" id="customer-buy">customer buy</div>
+                </div>
+            </div>
+
+            <style>
+                .order-mobile-cart-slide .badge {
+                    display: inline-block !important;
+                    height: auto !important;
+                }
+
+                .order-mobile-cart-slide {
+                    border-top: 1px solid #cccc;
+                    display: flex;
+                }
+
+                    .order-mobile-cart-slide a {
+                        text-align: center;
+                        padding: 10px 0px;
+                        color: white;
+                        background-color: var(--primary-color);
+                        font-weight: bold;
+                        border-radius: 5px;
+                        font-family: 'Poppins Medium';
+                        margin: 10px 0px;
+                        width: 100px;
+                    }
+            </style>
+        </div>
+        <div class="footer">
+            <button class="btn-continue">
+                TIẾP TỤC
+            </button>
+            <button class="btn-pay">
+                THANH TOÁN
+            </button>
+        </div>
+    </div>
+
+    <style>
+        #cartSlidebar {
+            width: 30vw;
+        }
+
+            #cartSlidebar .offcanvas-header {
+                background: var(--primary-color);
+                padding: 1rem 0 0 1rem;
+            }
+
+            #cartSlidebar .btn-close {
+                background-image: url('https://vuacua.vn/themes/storefront/public/images/close.png?v=1.2.05');
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                background-size: contain;
+            }
+
+
+            #cartSlidebar .nav-tabs {
+                border: 0;
+            }
+
+                #cartSlidebar .nav-tabs .nav-link {
+                    border: 0;
+                    color: white !important;
+                    cursor: pointer;
+                }
+
+                    #cartSlidebar .nav-tabs .nav-link.active {
+                        color: black !important;
+                    }
+
+        .cart-slidebar__item-detail {
+            padding-left: 20px;
+        }
+
+        .cart-slidebar__item-image {
+            padding: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 120px;
+            align-items: center;
+            display: flex;
+            border-radius: 10px
+        }
+
+            .cart-slidebar__item-image img {
+                width: 100px;
+            }
+
+        .cart-slidebar__control {
+            display: flex;
+        }
+
+            .cart-slidebar__control input[type="text"] {
+                width: 50px;
+                text-align: center;
+                text-align: center;
+                border-right: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                border-top: 0;
+                border-bottom: 0;
+                width: 35px;
+            }
+
+        .cart-slidebar__control-quantity {
+            align-self: center;
+        }
+
+            .cart-slidebar__control-quantity i {
+                color: #ccc;
+                font-size: 14px;
+            }
+
+        .cart-slidebar__control-quantity {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 0 10px;
+        }
+
+        .quantity {
+            background-color: var(--primary-color);
+        }
+
+        .offcanvas .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 20px;
+            background-color: #f1f1f1;
+        }
+
+            .offcanvas .footer button {
+                border-radius: 5px;
+                color: white;
+                width: 48%;
+                padding: 10px 0;
+                border: 0;
+            }
+
+        .btn-continue {
+            background-color: #95a5a6;
+        }
+
+        .btn-pay {
+            background-color: #b31e2d;
+        }
+
+        .cart-slidebar__item-detail .product-name {
+            font-size: 15.63px;
+        }
+
+        .cart-slidebar__item-detail .product-price {
+            font-size: 15.63px;
+            border-bottom: 1px solid grey;
+        }
+    </style>
+
+    <!-- Start: call me button -->
+    <!-- end: call me button -->
+    <!-- start: register modal -->
+    <!-- start: registerModal -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex justify-content-center">
+            <div class="modal-content desktop-width">
+                <div class="modal-header gray-bg-color">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body gray-bg-color">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <!-- start: col 1 -->
+                            <div class="white-bg-color col-md-5 px-5 py-3 text-start d-none d-lg-block">
+                                <span class="poppins text-primary"><b>Đăng nhập</b></span>
+                                <p class="poppins small-text no-margin text-justify">
+                                    Đăng nhập để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích, nhận nhiều ưu đãi hấp dẫn
+                                </p>
+                                <div style="height: 250px" class="d-flex justify-content-center align-items-center">
+                                    <img src="https://vuacua.vn/storage/media/aJUYydYdUnD3ocFoMbQYmuYdWR8wNHA3yWhNB1Eg.png" alt="Full Logo" />
+                                </div>
+                            </div>
+                            <!-- end: col 1 -->
+                            <div class="gray-bg-color col-md-1"></div>
+                            <!-- start: col 2 -->
+                            <div class="white-bg-color col-md-6 text-start">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                            Đăng nhập
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                            Đăng ký
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <!-- start: login -->
+                                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <!-- start: email -->
+                                        <div class="input-group mt-4 mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Email" />
+                                        </div>
+                                        <!-- end: email -->
+                                        <!-- start: password -->
+                                        <div class="input-group mb-2">
+                                            <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mật khẩu" />
+                                        </div>
+                                        <!-- end: password -->
+                                        <p class="poppins small-text">
+                                            <i>
+                                                Quên mật khẩu? Nhấn vào
+                                                <a href="#!" style="text-decoration: none; color: rgb(86, 190, 250)">đây</a>
+                                            </i>
+                                        </p>
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-warning" type="button">Đăng nhập</button>
+                                            <button class="btn facebook-bg-color btn-sm white-text" type="button">Facebook</button>
+                                            <button class="btn google-bg-color btn-sm white-text" type="button">Google</button>
+                                        </div>
+                                    </div>
+                                    <!-- end: login -->
+                                    <!-- start: sign up -->
+                                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <!-- start: Tên -->
+                                        <div class="input-group mt-4 mb-3">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tên" />
+                                        </div>
+                                        <!-- end: Tên -->
+                                        <!-- start: email -->
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Email" />
+                                        </div>
+                                        <!-- end: email -->
+                                        <!-- start: Mật khẩu -->
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mật khẩu" />
+                                        </div>
+                                        <!-- end: Mật khẩu -->
+                                        <!-- start: Xác nhận mật khẩu -->
+                                        <div class="input-group mb-2">
+                                            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Xác nhận mật khẩu" />
+                                        </div>
+                                        <!-- end: Xác nhận mật khẩu -->
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-warning" type="button">Đăng ký</button>
+                                        </div>
+                                    </div>
+                                    <!-- end: sign up -->
+                                </div>
+                            </div>
+                            <!-- end: col 2 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer gray-bg-color"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end: registerModal --><!-- end: register modal -->
+    <!-- start: breadcrumbs -->
+    <!-- end: breadcrumbs -->
+    <!-- start: combo detail -->
+
+    <div class="container mb-4">
+        <div class="row border-bottom pb-4 ">
+            <!-- start: col 1 -->
+            <div class=" px-0 col-4">
+                <!-- The expanding image container -->
+                <div class="expanded-container">
+                    <!-- Expanded image -->
+                    <img id="expandedImg" alt="@Url.Content(@Model.CHITIETLOAI)"
+                         src="@Url.Content("~/Assets/admin/assets/images/haisan/"+ @Model.HINHANH)">
+                </div>
+                <!-- The grid: four columns -->
+
+                <div class="share-and-favorite">
+                    <div class="share">
+                        <span class="text">Chia sẽ</span>
+                        <a class="me-1">
+                            <span class="blue-bg-color white-text round-background messenger">
+                                <i class="fab fa-facebook-messenger"></i>
+                            </span>
+                        </a>
+                        <a class="me-1">
+                            <span class="primary-bg-color white-text round-background instagram">
+                                <i class="fab fa-instagram"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https://vuacua.vn/san-pham/ca-phe-sua-330ml-"
+                           target="blank">
+                            <span class="blue-bg-color white-text round-background facebook">
+                                <i class="fab fa-facebook-f medium-text"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="favorite">
+                        <span class="primary-bg-color white-text  favorite-icon"
+                              style="border-radius: 100%;    height: 25px;padding: 5px;  display: flex; width: 25px;">
+                            <i class="fab fa-gratipay"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end: col 1 -->
+
+            <div class="col-5 ps-5  d-flex flex-column justify-content-start">
+                <form method="POST" action="https://vuacua.vn/cart/items" class="clearfix product-form  ">
+                    <input type="hidden" name="_token" value="XkDKEeSFpHhImowu8ITHcRDgRIJwzcaoysCjfMqD">
+                    <input type="hidden" id="product_id_368" name="product_id"
+                           value="368" />
+                    <div class="bg-white pt-2 px-3 mb-1">
+
+                        <h4 class="poppins me-2 mb-0 text-start product-name ">
+                            <b style="line-height: 1.2em;">@Url.Content(@Model.CHITIETLOAI)</b>
+                        </h4>
+                        <div class="no-margin text-start">
+                            <span class="product-rating">
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </span>
+                            <span class="product-ordered ms-1 ps-1">|&nbsp;&nbsp;Số lượng còn ở cửa hàng: @Url.Content(@Model.SOLUONG.ToString()) </span>
+                        </div>
+                        <div class="product-price">
+                            <span class="poppins large-text mb-2 text-primary no-margin text-start d-grid">
+                                <b>@Url.Content(@Model.GIATIEN.ToString()) ₫</b>
+                            </span>
+                        </div>
+                    </div>
+
+                  
+
+
+                    <div class="product__add-cart">
+                        <div class="d-flex mt-2 justify-content-between">
+                            
+                            <div class="product__add-cart-button">
+                                <button type="button" class="btn order-btn-368 " data-id="368" onclick="AddToCart('@Url.Content(@Model.MSHAISAN)')">
+                                    <h5 class="text-uppercase no-margin"><b>Đặt mua</b></h5>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <script>
+                function AddToCart(ProductId) {
+                    
+                    $.ajax({
+                        type: 'POST', url: '/User/Product/AddtoCart', data: { id: ProductId }, success: function (data) {
+                            $("#Cart_Amount").html(data.ItemAmount);
+                        }
+                    });
+                }
+            </script>
+            <div class="col-3 mt-2 d-flex flex-column align-items-center">
+                <div class="paper mt-3">
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="https://vuacua.vn/themes/storefront/public/images/cam-ket-badge.png?v=1.2.05" alt="cam ket"
+                                 width="40px" height="50px" />
+                        </div>
+                        <div class="col-9 text-start no-padding">
+                            <p class="green-text poppins text-uppercase no-margin"><b>Cam kết chất lượng</b></p>
+                            <p class="poppins small-text no-margin">
+                                <i>@Model.TENHAISAN chính hãng<br />Nguồn gốc xuất xứ rõ ràng</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <img src="https://vuacua.vn/themes/storefront/public/images/bao-doi-tra.png?v=1.2.05" alt="cam ket"
+                                 width="40px" height="40px" />
+                        </div>
+                        <div class="col-9 text-start no-padding">
+                            <p class="yellow-text poppins text-uppercase no-margin"><b>Bao đổi trả</b></p>
+                            <p class="poppins small-text no-margin">
+                                <i>1 đổi 1 nếu có vấn đề</i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-3">
+                            <img src="https://vuacua.vn/themes/storefront/public/images/giao-nhanh.png?v=1.2.05" alt="cam ket" width="40px"
+                                 height="40px" />
+                        </div>
+                        <div class="col-9 text-start no-padding">
+                            <p class="text-primary poppins text-uppercase no-margin"><b>Giao nhanh</b></p>
+                            <p class="poppins small-text no-margin">
+                                <i>Giao hàng nhanh 60 phút</i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row text-start text-justify">
+                        <p class="poppins small-text no-margin blue-text">
+                            <i>
+                                King Ocean bảo vệ bạn, đừng ngại gửi thông tin cho chúng tôi qua email: <br />
+                                <a class="text-primary" href="">hotro@KingOcean.vn</a>
+                                <br />Khiếu nại của bạn sẽ được xử lý sớm nhất có thể!
+                            </i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- start: optionModal -->
+    <div class="modal fade" id="optionModal" tabindex="-1" aria-labelledby="optionModalLabel" aria-hidden="true"></div>
+    <!-- end: optionModal -->
+    <!-- end: combo detail -->
+    <!-- start:message modal -->
+
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="display: flex !important; justify-content: center !important">
+            <div class="modal-content desktop-width">
+                <div class="modal-header pt-4 px-4" style="border: none; align-items: start;">
+                    <h4 class="poppins text-primary text-uppercase modal-title"><b>Nhập thông tin đặt hàng</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="POST" id="booking-form" action="" class="clearfix">
+                    <input type="hidden" name="_token" value="XkDKEeSFpHhImowu8ITHcRDgRIJwzcaoysCjfMqD">
+
+                    <div class="modal-body  px-4 mb-0 booking-form" style="border: none">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="input-group mb-2 input-group-lg">
+                                    <input type="text" class="form-control" name="full_name" id="full_name" value="" placeholder="Tên" aria-label="Tên" aria-describedby="basic-addon2" />
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2">
+                                        <img height="30" width="30" src="https://vuacua.vn/themes/storefront/public/images/person.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                                <div class="input-group mb-2 input-group-lg">
+                                    <select class="form-control" name="branch" id="branch" aria-label="Chọn chi nhánh" aria-describedby="basic-addon2">
+                                        <option value="0">Chọn chi nhánh</option>
+                                        <option value="1">Chi nhánh Sư Vạn Hạnh</option>
+                                        <option value="2">Chi nhánh Vũ Huy Tấn</option>
+                                        <option value="5">Chi nhánh Bàu Cát</option>
+                                        <option value="6">Chi nhánh Võ Văn Kiệt</option>
+                                        <option value="7">Chi nhánh Bình Phú</option>
+                                        <option value="11">VCE Nguyễn Văn Thương</option>
+                                        <option value="16">VCE - Nha Trang</option>
+                                        <option value="17">Vua Cua Express - Nguyễn Công Trứ</option>
+                                    </select>
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2">
+                                        <img height="30" width="30" src="https://vuacua.vn/themes/storefront/public/images/home.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group mb-2 input-group-lg">
+                                    <input type="text" class="form-control" name="phone" id="phone" value="" placeholder="Số điện thoại" aria-label="Số điện thoại" aria-describedby="basic-addon2" />
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2">
+                                        <img height="30" width="20" src="https://vuacua.vn/themes/storefront/public/images/phone.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                                <div class="input-group mb-2 input-group-lg">
+                                    <input type="text" class="form-control" name="pax" id="pax" value="" placeholder="Số lượng khách" aria-label="Số lượng khách" aria-describedby="basic-addon2" />
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2">
+                                        <img height="30" width="30" src="https://vuacua.vn/themes/storefront/public/images/person-quantity.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="input-group mb-2 input-group-lg">
+                                    <input type="text" class="form-control" name="email" id="email" value="" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2" />
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2  mt-1">
+                                        <img height="25" width="30" src="https://vuacua.vn/themes/storefront/public/images/email.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                                <div class="input-group mb-2 input-group-lg">
+                                    <input type="text" class="form-control" name="datetime" id="datetime" value="" placeholder="Ngày đặt" aria-label="Ngày đặt" onfocus="(this.type='datetime-local',this.min='2022-05-23T18:10:33',this.value='2022-05-22T18:05:33')" aria-describedby="basic-addon2" />
+                                    <span class="input-group-text no-border-left white-bg-color no-padding basic-addon2" style="top:5px;">
+                                        <img height="30" width="30" src="https://vuacua.vn/themes/storefront/public/images/calendar.png?v=1.2.05" />
+                                    </span>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-3">
+                                <div class="form-check" style="width: fit-content">
+                                    <input class="form-check-input" name="vip" id="vip" type="checkbox" value="1" />
+                                    <label class="form-check-label text-primary poppins-light medium-text" for="vip">
+                                        Đặt phòng VIP + 300k
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="grp-type">
+                            <div class="col-4">
+                                <div class="form-check" style="width: fit-content">
+                                    <input class="form-check-input" type="radio" name="type" id="type-booking" value="table" checked="checked" />
+                                    <label class="form-check-label medium-text" for="type-booking">Khách đặt bàn gọi món </label>
+                                    <span class="validate-message error">&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-check" style="width: fit-content">
+                                    <input class="form-check-input" type="radio" name="type" id="type-buffet" value="buffet" />
+                                    <label class="form-check-label medium-text" for="type-buffet"> Đặt bàn buffet </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                                <p class="poppins medium-text no-margin text-start  mb-3">
+                                    <i>Nếu quý khách có bất kỳ câu hỏi hoặc yêu cầu liên quan đến việc đặt chỗ:</i>
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <textarea class="form-control" name="message" id="message" aria-label="With textarea"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3 success-messages">
+                            <span class="validate-message success"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer justify-content-center align-items-center px-5 pb-3" style="border: none">
+                        <button type="button" class="btn text-uppercase primary-bg-color white-text submit-booking" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Đang xử lý">
+                            <b>Đặt ngay</b>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end:message modal -->
+    <!-- Start: Thông tin chi tiết -->
+    <div class="container mt-2 mb-4 product-description">
+        <div class="row">
+            <div class="col-9">
+                <h5 class="poppins text-primary product-title"><b>Thông tin chi tiết</b></h5>
+                <div class="product-description__content">
+                    <p>@Model.MIEUTA</p><p></p><h1>Lợi ích khi sử dụng @Url.Content(@Model.TENHAISAN) : &nbsp;</h1><p>- Tăng cường tập trung, tạo hưng phấn và cải thiện tâm trạng.</p><p>- Cải thiện trí nhớ, giảm các triệu chứng của Ahzeheimer.</p><p>- Giảm rủi ro mắc các bệnh ung thư.</p><p>- Chống oxy hóa</p><p><img src="~/Assets/admin/assets/images/haisan/@Model.HINHANH" style="width: 100%;"><br><br></p><p></p>
+                    <h1>Câu chuyện về @Url.Content(@Model.TENHAISAN):</h1><p>@Url.Content(@Model.TENHAISAN) tạo ra vị ngon quyến rũ rất đặc trưng mà không thể tìm thấy ở bất cứ cửa hàng nào trên thế giới. King Ocean mong muốn lưu giữ truyền thống độ tươi ngon từ thời xưa, góp phần gìn giữ hình ảnh hải sản Việt Nam gắn liền với quê hương và tuổi thơ.</p><h2>Lưu ý:&nbsp;</h2><p> @Url.Content(@Model.TENHAISAN) trước khi sử dụng, nên trần qua nước sôi</p><h2>Thành phần dinh dưỡng có trong @Url.Content(@Model.TENHAISAN): </h2><p>Protein, Cacbohydrate, Fat</p><h2>Hướng dẫn bảo quản @Url.Content(@Model.TENHAISAN):</h2><p>- Bảo quản trong điều kiện tủ đông: 24 ngày.</p><p>- Bảo quản trong điều kiện tủ mát: 24 giờ.</p><p><br></p> ..
+                </div>
+
+                <div class="read-continue-mobile">
+                    <input type="hidden" value="&lt;p&gt;@Url.Content(@Model.TENHAISAN) được nhập khẩu Việt Nam từ những năm 1857 nuôi dưỡng và phát triển đến ngày nay. Kể từ đó, &quot;@Url.Content(@Model.TENHAISAN)&quot; dần trở thành một món ngon đặc biệt trong mắt của người dân Việt Nam. @Url.Content(@Model.TENHAISAN) có nhiều loại khác nhau tùy theo nơi sống, cách chế biến và khẩu vị của người dùng, trong đó nếu bạn muốn sử dụng @Url.Content(@Model.TENHAISAN) nhưng bị dị ứng thì phải hỏi ý kiến bác sĩ trước khi dùng&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;h1&gt;Lợi ích khi sử dụng @Url.Content(@Model.TENHAISAN):&amp;nbsp;&lt;/h1&gt;&lt;p&gt;- Tăng cường tập trung, tạo hưng phấn và cải thiện tâm trạng.&lt;/p&gt;&lt;p&gt;- Cải thiện trí nhớ, giảm các triệu chứng của Ahzeheimer.&lt;/p&gt;&lt;p&gt;- Giảm rủi ro mắc các bệnh ung thư.&lt;/p&gt;&lt;p&gt;- Chống oxy hóa&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;~/Assets/admin/assets/images/haisan/@Model.HINHANH&quot; style=&quot;width: 100%;&quot;&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h1&gt;Câu chuyện @Url.Content(@Model.TENHAISAN):&lt;/h1&gt;&lt;p&gt;@Url.Content(@Model.TENHAISAN) tạo ra vị ngon quyến rũ rất đặc trưng mà không thể tìm thấy ở bất cứ cửa hàng nào trên thế giới. King Ocean mong muốn lưu giữ truyền thống độ tươi ngon từ thời xưa, góp phần gìn giữ hình ảnh hải sản Việt Nam gắn liền với quê hương và tuổi thơ.&lt;/p&gt;&lt;&lt;h2&gt;Lưu ý:&amp;nbsp;&lt;/h2&gt;&lt;p&gt;@Url.Content(@Model.TENHAISAN) trước khi sử dụng, nên trần qua nước sôi &lt;/p&gt;&lt;h2&gt;Thành phần dinh dưỡng có trong @Url.Content(@Model.TENHAISAN): &lt;/h2&gt;&lt;p&gt;Protein, Cacbohydrate, Fat.&lt;/p&gt;&lt;h2&gt;Hướng dẫn bảo quản cà phê sữa Vua Café:&lt;/h2&gt;&lt;p&gt;- Bảo quản trong điều kiện tủ đông: 24 ngày.&lt;/p&gt;&lt;p&gt;- Bảo quản trong điều kiện tủ mát: 24 giờ.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" id="product-description-hidden" />
+                    <button class="read-continute">Xem tiếp >></button>
+                </div>
+
+                <div class="review">
+                    <h5 class="customer-review-title">Khách Hàng Nhận Xét</h5>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="rating">
+                                <div class="average-rating mb-3 clearfix">
+                                    <div class="average text-center w-100 ">
+                                        <span>0.0</span>
+                                    </div>
+                                    <div class="text-center w-100">
+                                        <span class="product-rating">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                    </div>
+                                    <div class="text-center w-100">
+                                        <span class="reviews-total">0 nhận xét</span>
+                                    </div>
+                                </div>
+                                <div class="rating-bars-wrapper clearfix">
+                                    <div class="row rating-bar">
+                                        <div class="col-3 ">
+                                            <span class="product-rating">
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="rating-percentaget">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="row rating-bar">
+                                        <div class="col-3 ">
+                                            <span class="product-rating">
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="rating-percentaget">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="row rating-bar">
+                                        <div class="col-3 ">
+                                            <span class="product-rating">
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="rating-percentaget">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="row rating-bar">
+                                        <div class="col-3 ">
+                                            <span class="product-rating">
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="rating-percentaget">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="row rating-bar">
+                                        <div class="col-3 ">
+                                            <span class="product-rating">
+                                                <i class="fa fa-star rated"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                                <i class="fa fa-star-o"></i>
+                                            </span>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <span class="rating-percentaget">0</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="user-review clearfix">
+                                <h3>Hãy là người đầu tiên nhận xét về sản phẩm này</h3>
+                                <!-- <button class="read-continute">Xem tất cả</button> -->
+                                <!-- <div class="pull-right">
+
+                                </div> -->
+
+                                <style>
+                                    .comment-details {
+                                        font-family: 'Poppins Light';
+                                        margin-bottom: 1rem;
+                                    }
+
+                                    .comment-details__top {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-bottom: 1rem;
+                                    }
+
+                                    .comment-details__top-user-name {
+                                        font-weight: bold;
+                                        font-size: 18px;
+                                        font-family: 'Poppins Medium';
+                                    }
+
+                                    .comment-details__top-buy {
+                                        color: #008b4f;
+                                    }
+
+                                    .comment-details__bottom {
+                                        color: #929497;
+                                        font-size: 14px;
+                                    }
+
+                                    .comment-details__bottom-time::after {
+                                        content: " | ";
+                                        display: inherit;
+                                        margin: 0 10px;
+                                    }
+
+                                    .comment-details__control {
+                                        display: flex;
+                                        align-items: center;
+                                        margin-top: 1rem;
+                                    }
+
+                                    .comment-details__control-favorite {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        border: 1px solid #25a9e0;
+                                        color: #25a9e0;
+                                        padding: 5px 20px;
+                                        align-items: center;
+                                        border-radius: 10px;
+                                        margin-right: 3rem;
+                                        cursor: pointer;
+                                    }
+
+                                        .comment-details__control-favorite i {
+                                            color: #bd202e;
+                                            margin-right: 1rem;
+                                        }
+
+                                    .comment-details__control-reply {
+                                        color: #25a9e0;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a href="https://vuacua.vn/san-pham/cua-nho-che-bien-san-200g-250g" target="_self">
+                    <img class="mb-3"
+                         src="https://vuacua.vn/storage/media/dRclgpNeAi7o0T3ZfRG5rCCN5aIl4oNsndvSJMqW.jpeg" height="auto" width="100%" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Start: Thông tin chi tiết -->
+    <style>
+        .product-description img {
+            width: 100% !important;
+        }
+
+        .product-description__content {
+            display: block;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .read-continute {
+            color: #1782f3;
+            border: 1px solid #1782f3;
+            font-family: "Poppins Medium";
+            border-radius: 20px;
+            background-color: transparent;
+            padding: 3px 35px;
+            margin: 20px auto;
+            display: flex;
+            cursor: pointer;
+        }
+
+        .read-continue-mobile {
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+
+
+    <!-- start: bookingModal -->
+    <!-- end: bookingModal -->
+    <style>
+        #booking-form .input-group-text {
+            position: absolute;
+        }
+
+        #booking-form .form-control {
+            border-radius: 5px;
+            color: gray;
+            font-size: 20px;
+            font-family: "Poppins Light";
+        }
+
+        #booking-form select {
+            font-size: 20px;
+            color: gray;
+            font-family: "Poppins Light";
+        }
+
+        #booking-form textarea {
+            height: 150px;
+        }
+
+        #booking-form .submit-booking {
+            border-radius: 14px;
+            padding: 10px 4rem;
+            color: white;
+        }
+
+        #booking-form .form-check-label {
+            font-family: 'Poppins Medium';
+        }
+    </style>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/jquery-3.6.0.min.js?v=1.2.05"></script>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/jquery-ui.min.js?v=1.2.05"></script>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/jquery.min.js?v=1.2.05"></script>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/popper.min.js?v=1.2.05"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+    <script type="text/javascript" src="https://vuacua.vn/plugin/slick/slick.min.js"></script>
+    <script type="text/javascript"
+            src="https://vuacua.vn/themes/storefront/public/css/bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js?v=1.2.05"></script>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/index.js?v=1.2.05"></script>
+    <script type="text/javascript" src="https://vuacua.vn/themes/storefront/public/js/cartSlider.js?v=1.2.05"></script>
+    <script>
+        $('.read-continute').click(function () {
+            // e.stopPropagation();
+            var description_height = $('.product-description__content').height();
+            if (description_height == 500) {
+                $(".product-description__content").css({
+                    "height": "auto"
+                });
+                $(this).text("Thu gọn >>");
+            } else {
+                $(".product-description__content").css({
+                    "height": "500px"
+                });
+                $(this).text("Xem tiếp >>");
+            }
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.product-thumb-nav').slick({
+                dots: false,
+                arrows: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 2,
+                variableWidth: true,
+                infinite: false,
+                draggable: true,
+            });
+        });
+    </script>
+    <script src="https://vuacua.vn/themes/storefront/public/js/products.js?v=1.2.05"></script>
+    <script src="https://vuacua.vn/themes/storefront/public/js/cart.js?v=1.2.05"></script>
+    <script type="text/javascript">
+        var keywords = [];
+    </script>
+    <script type="text/javascript">
+        keywords.push("Cua");
+    </script>
+    <script type="text/javascript">
+        keywords.push("Bánh");
+    </script>
+    <script type="text/javascript">
+        keywords.push("Bánh mi");
+    </script>
+    <script type="text/javascript">
+        keywords.push("Bánh bao");
+    </script>
+    <script type="text/javascript">
+        keywords.push("Sôt");
+    </script>
+    <script type="text/javascript">
+        setInterval(function () {
+            if ($(".search-input").val() == "") {
+                $(".search-input").attr("placeholder", keywords[Math.floor(Math.random() * keywords.length)]).removeClass("fade");
+            }
+        }, 3000);
+
+        function searchClick(obj) {
+            if ($(obj).val() == "") {
+                $(obj).val($(obj).attr('placeholder'));
+            }
+            $(obj).trigger('keyup');
+        }
+    </script>
+
+</body>
+
+</html>

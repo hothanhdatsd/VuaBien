@@ -1,0 +1,375 @@
+﻿@using SeaFoodProject.Models
+@{
+    ViewBag.Title = "Giỏ hàng";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card-wrap">
+    <div class="cart-tittle">
+        <div>
+            <span class="cart-heading">GIỎ HÀNG CỦA BẠN</span>
+            <span style="color: #b31e2d; font-weight:600; display:block;">
+                Địa chỉ:
+                @if (!string.IsNullOrEmpty(Session["Addr"] as string))
+                {
+                    @Session["Addr"].ToString()
+                }
+                <a href="/User/User">Cập nhật  </a>
+
+            </span>
+            <span style="color: #b31e2d; font-weight:600">
+                SĐT:
+                @if (!string.IsNullOrEmpty(Session["sdt"] as string))
+                {
+                    @Session["sdt"].ToString()
+                }
+                <a href="/User/User">Cập nhật</a>
+            </span>
+        </div>
+    </div>
+    <div class="cart-list">
+        @*<div class="cart-item">
+            <div class="cart-item__tittle">
+                <img src="https://vuacua.vn/storage/media/wqXNGdu2mEueywGLy0OOoIy9wCki09UAa1bAHTXg.png" />
+                <div class="cart-item__info">
+                    <span>Cafe Đen (330 ml)</span>
+                    <div class="cart-item__update">
+                        <input class="cart-item__qty" />
+                        <a>Xoá</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item__price">
+                <span>69000đ</span>
+            </div>
+        </div>*@
+
+        @{  double? sum = 0.00;
+            if (Session["ShoppingCart"] != null)
+            {
+                
+                List<CartItem> ls = (List<CartItem>)Session["ShoppingCart"];
+                foreach (CartItem item in ls)
+                {
+                   
+                    sum = sum + ( item.qty * item.ProductOrder.GIATIEN );
+
+                <div id="del+@item.ProductOrder.MSHAISAN" class="cart-item">
+                    <div class="cart-item__tittle">
+                        <img src="~/Assets/admin/assets/images/haisan/@item.ProductOrder.HINHANH" />
+                        <div class="cart-item__info">
+                            <span>@item.ProductOrder.CHITIETLOAI (@item.ProductOrder.DONVITINH.TENDVT)</span>
+                            <div class="cart-item__update">
+                                <input id="qty+@item.ProductOrder.MSHAISAN" onchange="updateQty('@item.ProductOrder.MSHAISAN')" class="cart-item__qty" value="@item.qty" />
+                                <a onclick="deletecartItem('@item.ProductOrder.MSHAISAN')">Xoá</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item__price">
+
+                        <span id="@item.ProductOrder.MSHAISAN"> </span> <span>đ</span>
+                        <script>
+                            var a = @item.ProductOrder.GIATIEN*@item.qty;                         
+                                document.getElementById("@item.ProductOrder.MSHAISAN").innerHTML = a ;
+                        </script>
+                    </div>
+                </div>
+                }
+                
+        }
+        }
+
+        
+    </div>
+
+    <div class="payment">
+        <div class="payment-tittle">
+            <span>Tiền phụ:</span>
+            <span>Phí giao hàng:</span>
+            <span>Tổng tiền:</span>
+        </div>
+
+        <div class="payment-value">
+            <span id="tienphu">@sum đ</span>
+            <span>0</span>
+            <span id="tongtien">@sum đ</span>
+
+        </div>
+
+        @if (!string.IsNullOrEmpty(Session["idUser"] as string))
+        {
+            <div class="pay-button">
+                <a onclick="Order()">Đặt hàng</a>
+            </div>
+
+        }
+        else
+        {
+            <div class="pay-button btn-disabled">
+                <a style="padding: 0 !important;">Đăng nhập để đặt hàng</a>
+            </div>
+
+        
+        }
+    </div>
+
+
+
+</div>
+
+
+
+
+
+<style>
+    .pay-button {
+        width: 247px;
+        height: 53px;
+        background-color: #b31e2d;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        .pay-button a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 80px;
+        }
+
+        .pay-button:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+    .payment {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        margin: 12px 0;
+    }
+
+    .payment-tittle span {
+        display: block;
+        font-size: 20px;
+        color: #ccc;
+    }
+
+    .payment-value span {
+        text-align: right;
+        display: block;
+        font-size: 20px;
+        color: #b31e2d;
+    }
+
+    .card-wrap {
+        margin: 127px 92px 0 92px;
+        position: relative;
+    }
+
+    .cart-list {
+        overflow-y: scroll;
+        height: 500px;
+        padding: 0 32px;
+    }
+
+    .cart-tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px #b31e2d;
+        height: 78px;
+    }
+
+    .cart-heading {
+        color: #b31e2d;
+        margin-top: 8px;
+        font-weight: 600;
+        display: block;
+        font-size: 24px;
+    }
+
+    .cart-item__tittle img {
+        width: 150px;
+        height: 150px;
+        padding: 12px;
+        border: solid 2px #b31e2d;
+        margin: 12px;
+    }
+
+    .cart-item {
+        justify-content: space-between;
+        display: flex;
+        margin-top: 12px;
+        border-bottom: solid 1px #ccc;
+    }
+
+    .cart-item__tittle {
+        display: flex;
+    }
+
+    .cart-item__qty {
+        width: 40px;
+        height: 25px;
+        padding: 4px;
+    }
+
+    .cart-item__info span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .cart-item__update {
+        margin-top: 12px;
+        width: 130px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .cart-item__update a {
+            border: solid 2px #b31e2d;
+            color: white;
+            padding: 3px;
+            background-color: #b31e2d;
+            cursor: pointer;
+        }
+
+            .cart-item__update a:hover {
+                opacity: 0.8;
+            }
+
+
+    .cart-item__price {
+        color: #b31e2d;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .pay-button.btn-disabled {
+        background-color: #ccc;
+        cursor: default;
+        opacity: 0.8;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+
+<script>
+    function updateQty(id) {
+        var qty = document.getElementById('qty+' + id);
+        var gia = document.getElementById(id);
+        var tienphu = document.getElementById('tienphu');
+        var tongtien = document.getElementById('tongtien');
+        if (qty.value <= 0) {
+            alert('Số lượng phải lớn hơn 0');
+            qty.value = 1;
+            event.preventDefault();
+           
+        }
+        $.ajax({
+            type: 'POST',
+            url: '/User/Product/updateQty',
+            data: {
+                id: id,
+                qty: qty.value
+            },
+            success: function (data) {
+                gia.innerHTML = data.gia ;
+                tienphu.innerHTML = data.sum + 'đ';
+                tongtien.innerHTML = data.sum + 'đ';
+            }
+        });
+    }
+
+
+    function Order() {
+        //hien thong bao xac nhan dat hang
+        Swal.fire({
+            title: 'Xác nhận đặt hàng?',
+            showCancelButton: true,
+            confirmButtonText: 'Có',
+        }).then((result) => {
+            
+            if (result.isConfirmed) {//neu xac nhan
+                $('#loading').show();
+                $.ajax({
+                    type: 'POST',
+                    url: '/User/Product/AddToOrder',
+                    data: {
+                        id: 2,
+                        qty: 2
+                    },
+                    success: function (data) {
+
+                        if (data.state == "success") {
+
+                            Swal.fire(
+                                'Thành công!',
+                                'Cảm ơn bạn đã đặt hàng!',
+                                'success'
+                            )
+
+                        } else {
+                            Swal.fire(
+                                'Thất bại!',
+                                'Giỏ hàng trống!',
+                                'error'
+                            )
+                        }
+
+                        $('#loading').hide();
+                    }
+                });
+
+            } 
+        })
+
+        
+    }
+
+
+    function deletecartItem(id) {
+        var tienphu = document.getElementById('tienphu');
+        var tongtien = document.getElementById('tongtien');
+        //hien thong bao xac nhan dat hang
+        Swal.fire({
+            title: 'Xác nhận xoá?',
+            showCancelButton: true,
+            confirmButtonText: 'Có',
+        }).then((result) => {
+
+            if (result.isConfirmed) {//neu xac nhan
+                $('#loading').show();
+                $.ajax({
+                    type: 'POST',
+                    url: '/User/Product/deletecartItem',
+                    data: {
+                        id: id,
+                    },
+                    success: function (data) {
+                        Swal.fire(
+                            'Thành công!',
+                            'Xoá thành công!',
+                            'success'
+                        )
+                        document.getElementById('del' + '+' + id).remove();
+                        tienphu.innerHTML = data.sum + 'đ';
+                        tongtien.innerHTML = data.sum + 'đ';
+
+                        $('#loading').hide();
+
+                    }
+                });
+
+            }
+        })
+    }
+</script>

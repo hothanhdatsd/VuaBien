@@ -1,0 +1,64 @@
+﻿@model SeaFoodProject.NHANVIEN
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Đăng nhập</title>
+    <link href="~/Assets/admin/assets/css/styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-danger">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Đăng nhập</h3></div>
+                                <div class="card-body">
+                                    <form method="post" action="./Login/Login">
+                                        @Html.AntiForgeryToken()
+
+                                        <div class="form-floating mb-3">
+                                            @Html.EditorFor(model => model.USERNAME, new { htmlAttributes = new { @class = "form-control", placeholder = "Tên đăng nhập", id = "inputEmail" } })
+                                            @Html.ValidationMessageFor(model => model.USERNAME, "", new { @class = "text-danger" })
+
+                                            @*<input class="form-control" name="USERNAME" id="inputEmail" type="text" placeholder="Tên đăng nhập" />*@
+                                            <label for="inputEmail">Tên đăng nhập</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            @Html.EditorFor(model => model.PASS_WORD, new { htmlAttributes = new { @class = "form-control", type = "password", placeholder = "Mật khẩu", id = "inputPassword" } })
+                                            @Html.ValidationMessageFor(model => model.PASS_WORD, "", new { @class = "text-danger" })
+
+                                            @*<input class="form-control" name="PASS_WORD" id="inputPassword" type="password" placeholder="Mật khẩu" />*@
+                                            <label for="inputPassword">Mật khẩu</label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input name="login_remember" class="form-check-input" id="inputRememberPassword" type="checkbox" value="true" />
+                                            <input name="login_remember" type="hidden" value="false" />
+                                            <label class="form-check-label" for="inputRememberPassword">Nhớ mật khẩu</label>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                            <a class="small" href="password.html">Quên mật khẩu?</a>
+                                            <input type="submit" class="btn btn-danger" value="Đăng nhập"/>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="~/Assets/admin/assets/js/scripts.js"></script>
+</body>
+</html>

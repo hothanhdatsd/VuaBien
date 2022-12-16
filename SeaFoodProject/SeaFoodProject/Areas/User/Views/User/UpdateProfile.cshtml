@@ -1,0 +1,314 @@
+﻿@model SeaFoodProject.KHACHHANG
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/User/Views/Shared/_Layout.cshtml";
+}
+<div class="card-wrap">
+    <div class="cart-tittle">
+        <div>
+            <span class="cart-heading">CẬP NHẬT THÔNG TIN CÁ NHÂN</span>
+            <p class="error" id="error"></p>
+        </div>
+    </div>
+    <div class="cart-list">
+        @*<div class="cart-item">
+            <div class="cart-item__tittle">
+                <img src="https://vuacua.vn/storage/media/wqXNGdu2mEueywGLy0OOoIy9wCki09UAa1bAHTXg.png" />
+                <div class="cart-item__info">
+                    <span>Cafe Đen (330 ml)</span>
+                    <div class="cart-item__update">
+                        <input class="cart-item__qty" />
+                        <a>Xoá</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-item__price">
+                <span>69000đ</span>
+            </div>
+        </div>*@
+
+
+
+
+        <div class="cart-item">
+            <div class="user__info bold">
+                <span>Họ và tên:</span>
+                <span>Địa chỉ:</span>
+                <span>Số điện thoại:</span>
+                <span>Email:</span>
+
+
+
+            </div>
+            <div class="user__info">
+                <input id="UserFullName" value="@Model.HOTEN" />
+                <textarea id="UserAddr">@Model.DIACHI</textarea>
+                <input id="UserNumber" value="@Model.SDT" />
+                <input id="UserMail" value="@Model.EMAIL" />
+
+
+            </div>
+        </div>
+
+        <div class="pay-button">
+            <a onclick="updateProfile()">Cập nhật</a>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<style>
+
+    .user__info span a {
+        text-decoration: none;
+    }
+
+    .edit_profile {
+        text-decoration: none;
+    }
+
+    .user__info span {
+        display: block;
+        font-size: 24px;
+        color: #b31e2d;
+        padding: 15px;
+    }
+
+    .user__info input {
+        margin: 8px 0px;
+        display: block;
+        font-size: 24px;
+        padding: 8px;
+        color: #b31e2d;
+    }
+    .user__info textarea {
+        margin: 8px 0px;
+        display: block;
+        font-size: 24px;
+        padding: 8px 9px;
+        color: #b31e2d;
+    }
+
+    .user__info.bold {
+        font-weight: 600;
+    }
+
+    .pay-button {
+        width: 247px;
+        height: 53px;
+        background-color: #b31e2d;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 12px 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: right;
+    }
+
+        .pay-button a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 80px;
+        }
+
+        .pay-button:hover {
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+    .payment {
+        display: flex;
+        justify-content: space-between;
+        float: right;
+        margin: 12px 0;
+    }
+
+    .payment-tittle span {
+        display: block;
+        font-size: 20px;
+        color: #ccc;
+    }
+
+    .payment-value span {
+        text-align: right;
+        display: block;
+        font-size: 20px;
+        color: #b31e2d;
+    }
+
+    .card-wrap {
+        margin: 127px 92px 0 92px;
+        position: relative;
+    }
+
+    .cart-list {
+        overflow-y: scroll;
+        height: 500px;
+        padding: 0 32px;
+    }
+
+    .cart-tittle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px #b31e2d;
+        height: 78px;
+    }
+
+    .cart-heading {
+        color: #b31e2d;
+        margin-top: 8px;
+        font-weight: 600;
+        display: block;
+        font-size: 24px;
+    }
+
+    .cart-item__tittle img {
+        width: 150px;
+        height: 150px;
+        padding: 12px;
+        border: solid 2px #b31e2d;
+        margin: 12px;
+    }
+
+    .cart-item {
+        justify-content: space-between;
+        display: flex;
+        margin-top: 12px;
+        border-bottom: solid 1px #ccc;
+    }
+
+    .cart-item__tittle {
+        display: flex;
+    }
+
+    .cart-item__qty {
+        width: 40px;
+        height: 25px;
+        padding: 4px;
+    }
+
+    .cart-item__info span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .cart-item__update {
+        margin-top: 12px;
+        width: 130px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .cart-item__update a {
+            border: solid 2px #b31e2d;
+            color: white;
+            padding: 3px;
+            background-color: #b31e2d;
+            cursor: pointer;
+        }
+
+            .cart-item__update a:hover {
+                opacity: 0.8;
+            }
+
+
+    .cart-item__price {
+        color: #b31e2d;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .pay-button.btn-disabled {
+        background-color: #ccc;
+        cursor: default;
+        opacity: 0.8;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .error {
+        color: red;
+    }
+</style>
+
+<script>
+    function updateProfile() {
+        var UserFullName = document.getElementById('UserFullName').value;
+        var UserAddr = document.getElementById('UserAddr').value;
+        var UserNumber = document.getElementById('UserNumber').value;
+        var UserMail = document.getElementById('UserMail').value;
+        var error = document.getElementById('error');
+        if (UserFullName == "") {
+            error.innerHTML = "Vui lòng nhập họ tên"
+            event.preventDefault();
+            return;
+
+        }
+        if (UserAddr == "") {
+            error.innerHTML = "Vui lòng nhập địa chỉ"
+            event.preventDefault();
+            return;
+
+
+        }
+        if (UserNumber == "") {
+            error.innerHTML = "Vui lòng nhập số điện thoại"
+            event.preventDefault();
+            return;
+
+        }
+        if (UserMail == "") {
+            error.innerHTML = "Vui lòng nhập email"
+            event.preventDefault();
+            return;
+
+
+        }
+
+        Swal.fire({
+            title: 'Đồng ý thay đổi?',
+            showCancelButton: true,
+            confirmButtonText: 'Có',
+        }).then((result) => {
+
+            if (result.isConfirmed) {//neu xac nhan
+                $('#loading').show();
+                $.ajax({
+                    type: 'POST',
+                    url: '/User/User/UpdateProfile',
+                    data: {
+                        UserFullName: UserFullName,
+                        UserAddr: UserAddr,
+                        UserNumber: UserNumber,
+                        UserMail: UserMail
+                    },
+                    success: function (data) {
+                        Swal.fire(
+                            'Thành công!',
+                            'Thay đổi thông tin thành công!',
+                            'success'
+                        )
+                        $('#loading').hide();
+                    }
+                });
+
+            }
+        })
+      
+    }
+</script>

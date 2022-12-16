@@ -1,0 +1,90 @@
+﻿@model IEnumerable<SeaFoodProject.HOADON>
+
+@{
+    ViewBag.Title = "Quản lý hoá đơn";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th>
+            Mã đơn
+        </th>
+        <th>
+            Khách hàng
+        </th>
+        <th>
+            Nhân viên quản lý
+        </th>
+        <th>
+            SĐT
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            Sản phẩm
+        </th>
+        <th>
+            Ngày lập
+        </th>
+        <th>
+            Tổng tiền
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MAHD)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KHACHHANG.HOTEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NHANVIEN.HOTEN)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KHACHHANG.SDT)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.KHACHHANG.DIACHI)
+    </td>
+    <td>
+        @foreach (var product in item.CHITIETHOADONs)
+        {
+            @Html.DisplayFor(modelItem => product.HAISAN.CHITIETLOAI) <span>( @product.HAISAN.LOAIHAISAN.TENLOAI - </span>
+
+            @Html.DisplayFor(modelItem => product.SOLUONG) <span>@product.HAISAN.DONVITINH.TENDVT</span> <span>)</span>
+            <br />
+        }
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NGAYLAP)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TONGTIEN) đ
+    </td>
+
+</tr>
+    }
+
+</table>
+
+
+<script>
+    function updateState(idState, idOrder) {
+        $.ajax({
+            type: 'POST',
+            url: '/Admin/Manage/updateStateOrder',
+            data: {
+                id_state: idState,
+                id_order: idOrder
+            },
+            success: function (data) {
+
+            }
+        });
+    }
+</script>

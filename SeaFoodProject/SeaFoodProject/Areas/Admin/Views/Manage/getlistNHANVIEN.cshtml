@@ -1,0 +1,94 @@
+﻿
+
+@using SeaFoodProject.Models
+@{
+    ViewBag.Title = "getlistNHANVIEN";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+
+    Pager pager = new Pager();
+
+    int pageNo = 0;
+
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+}
+
+
+<!--Thêm Thư Viện PagedList-->
+
+@model PagedList.IPagedList<SeaFoodProject.NHANVIEN>
+@using PagedList.Mvc;
+
+<div class="content">
+    <h2>DANH SÁCH NHÂN VIÊN</h2>
+
+    <p>
+        @Html.ActionLink("Thêm mới nhân viên", "addNHANVIEN", new { }, new { @class = "btn btn-danger" })
+    </p>
+</div>
+
+<section class="panel">
+    <div class="panel-body">
+        <div class="pull-right">
+            <!-- Thêm mã phân trang -->
+            <br />
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+            @Html.PagedListPager(Model, page => Url.Action("getListNHANVIEN", new { page }))
+            <!-- Kết thúc -->
+        </div>
+    </div>
+</section>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Mã NV
+        </th>
+        <th>
+            Họ tên
+        </th>
+        <th>
+            SDT
+        </th>
+        <th>
+            Mã CV
+        </th>
+        <th>
+            Email
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MANV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HOTEN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SDT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MACV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "editNHANVIEN", new { id = item.MANV }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Chi Tiết", "detailNHANVIEN", new { id = item.MANV }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Xóa", "delNHANVIEN", new { id = item.MANV }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>
+
